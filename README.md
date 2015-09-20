@@ -1,6 +1,8 @@
 # Larator
 
+[![Build Status](https://travis-ci.org/guiltry/larator.svg?branch=master)](https://travis-ci.org/guiltry/larator)
 [![Gem Version](https://badge.fury.io/rb/larator.svg)](http://badge.fury.io/rb/larator)
+
 
 The main purpose of this generator are:
 
