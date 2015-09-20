@@ -1,0 +1,7 @@
+{!! Form::model($<%= singular_table_name %>, array('route' => array('<%= singular_table_name %>.update', $<%= singular_table_name %>->id), 'method' => 'put')) !!}
+    @include('<%= plular_table_name %>._form')
+
+    {!! Form::submit('Update Me!'); !!}
+{!! Form::close() !!}
+
+{!! link_to_route('<%= singular_table_name %>.index', $title = "Back to Index", $attributes = array(), $secure = null) !!}

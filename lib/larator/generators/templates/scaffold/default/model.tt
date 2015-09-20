@@ -1,0 +1,10 @@
+<?php
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class <%= model_class_name %> extends Model
+{
+    <%= "// Please change this value" %>
+    protected $fillable = ['id'];
+}

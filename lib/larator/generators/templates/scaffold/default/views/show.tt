@@ -1,0 +1,10 @@
+<table>
+  <tr>
+    <th>id</th>
+  </tr>
+  <tr>
+    <td>{{$<%= singular_table_name %>->id}}</td>
+  </tr>
+</table>
+
+{!! link_to_route('<%= singular_table_name %>.index', $title = "Back to Index", $attributes = array(), $secure = null) !!}

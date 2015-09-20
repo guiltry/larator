@@ -1,0 +1,7 @@
+{!! Form::open(array('route' => '<%= singular_table_name %>.store')) !!}
+    @include('<%= plular_table_name %>._form')
+
+    {!! Form::submit('Create Me!'); !!}
+{!! Form::close() !!}
+
+{!! link_to_route('<%= singular_table_name %>.index', $title = "Back to Index", $attributes = array(), $secure = null) !!}

@@ -1,0 +1,20 @@
+<table border="1">
+    <tr>
+        <th>id</th>
+        <th>action</th>
+    </tr>
+    @foreach($<%= plular_table_name %> as $<%= singular_table_name %>)
+        <tr>
+            <td>{{$<%= singular_table_name %>->id}}</td>
+            <td>
+                {!! link_to_route('<%= singular_table_name %>.show', $title = "Show", $attributes = array('id' => $<%= singular_table_name %>->id), $secure = null) !!}
+                {!! link_to_route('<%= singular_table_name %>.edit', $title = "Edit", $attributes = array('id' => $<%= singular_table_name %>->id), $secure = null) !!}
+                {!! Form::open(['route' => ['<%= singular_table_name %>.destroy', $<%= singular_table_name %>->id], 'method' => 'DELETE']) !!}
+                    {!! Form::submit('Delete') !!}
+                {!! Form::close() !!}
+            </td>
+        </tr>
+    @endforeach
+</table>
+
+{!! link_to_route('<%= singular_table_name %>.create', $title = "Create New", $attributes = array(), $secure = null) !!}

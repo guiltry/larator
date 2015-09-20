@@ -1,0 +1,5 @@
+<?php
+
+$factory->define(App\<%= model_class_name %>::class, function (Faker\Generator $faker) {
+    return [];
+});
