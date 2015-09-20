@@ -1,5 +1,7 @@
 # Larator
 
+[![Gem Version](https://badge.fury.io/rb/larator.svg)](http://badge.fury.io/rb/larator)
+
 The main purpose of this generator are:
 
 1. Give an idea to newcomers how to create a simple CRUD application
@@ -7,7 +9,7 @@ The main purpose of this generator are:
 
 ## Why ruby
 
-1. Because ruby has [Thor](erikhuda/thor) gem, which really stable, rich feature and used by several other gems (e.g: rails, bundle)
+1. Because ruby has [Thor](https://github.com/erikhuda/thor) gem, which really stable, rich feature and used by several other gems (e.g: rails, bundle)
 2. Ruby has great [Inflector](http://api.rubyonrails.org/classes/ActiveSupport/Inflector.html) library (from rails)
 3. Ruby has [Rubygems](https://rubygems.org/) that make delivering process easier
 
@@ -23,7 +25,7 @@ larator generate scaffold user
 
 ## Development
 
-After checking out the repo, run `bundle install` to install dependencies. Then, run `rspec` to run the tests, also run `cucumber` to run [Aruba](cucumber/aruba) test.
+After checking out the repo, run `bundle install` to install dependencies. Then, run `rspec` to run the tests, also run `cucumber` to run [Aruba](https://github.com/cucumber/aruba) test.
 
 ## Todo
 
