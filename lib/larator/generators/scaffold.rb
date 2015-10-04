@@ -5,15 +5,15 @@ module Larator
     class Scaffold < Base
 
       def controller
-        template("controller.tt", "app/Http/Controllers/#{controller_class_name}Controller.php")
+        template("controller.tt", "#{controller_location}#{controller_class_name}Controller.php")
       end
 
       def views
-        template("views/index.tt", "resources/views/#{plular_table_name}/index.blade.php")
-        template("views/create.tt", "resources/views/#{plular_table_name}/create.blade.php")
-        template("views/show.tt", "resources/views/#{plular_table_name}/show.blade.php")
-        template("views/edit.tt", "resources/views/#{plular_table_name}/edit.blade.php")
-        template("views/_form.tt", "resources/views/#{plular_table_name}/_form.blade.php")
+        template("views/index.tt", "#{view_location}#{plular_table_name}/index.blade.php")
+        template("views/create.tt", "#{view_location}#{plular_table_name}/create.blade.php")
+        template("views/show.tt", "#{view_location}#{plular_table_name}/show.blade.php")
+        template("views/edit.tt", "#{view_location}#{plular_table_name}/edit.blade.php")
+        template("views/_form.tt", "#{view_location}#{plular_table_name}/_form.blade.php")
       end
 
       def request
@@ -21,7 +21,7 @@ module Larator
       end
 
       def model
-        template("model.tt", "app/#{model_class_name}.php")
+        template("model.tt", "#{model_location}#{model_class_name}.php")
       end
 
       def migration

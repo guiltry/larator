@@ -1,9 +1,9 @@
 Feature: Generate scaffold
-  
+
   Scenario: run command without parameter
     Given an empty file named "app/Http/routes.php"
     When I run `larator generate scaffold user`
-    
+
     # Controller
     Then the file "app/Http/Controllers/UserController.php" should exist
     And the file "app/Http/Controllers/UserController.php" should contain:
@@ -68,3 +68,43 @@ Feature: Generate scaffold
     """
     class UserTest extends TestCase
     """
+
+  Scenario: run command with parameter controller namespace
+    When I run `larator generate scaffold user --controller-namespace=App\\Http\\TestControllers`
+    Then the file "app/Http/Controllers/UserController.php" should exist
+    And the file "app/Http/Controllers/UserController.php" should contain:
+    """
+    namespace App\Http\TestControllers;
+    """
+
+  Scenario: run command with parameter controller location
+    When I run `larator generate scaffold user --controller-location=app/Http/TestControllers`
+    Then the file "app/Http/TestControllers/UserController.php" should exist
+    And the file "app/Http/TestControllers/UserController.php" should contain:
+    """
+    namespace App\Http\Controllers;
+    """
+
+  Scenario: run command with parameter model namespace
+    When I run `larator generate scaffold user --model-namespace=App\\Models`
+    Then the file "app/User.php" should exist
+    And the file "app/User.php" should contain:
+    """
+    namespace App\Models;
+    """
+
+  Scenario: run command with parameter model location
+    When I run `larator generate scaffold user --model-location=app/Models`
+    Then the file "app/Models/User.php" should exist
+    And the file "app/Models/User.php" should contain:
+    """
+    namespace App;
+    """
+
+  Scenario: run command with parameter view location
+    When I run `larator generate scaffold user --view-location=views`
+    Then the file "views/users/index.blade.php" should exist
+    And the file "views/users/create.blade.php" should exist
+    And the file "views/users/show.blade.php" should exist
+    And the file "views/users/edit.blade.php" should exist
+    And the file "views/users/_form.blade.php" should exist

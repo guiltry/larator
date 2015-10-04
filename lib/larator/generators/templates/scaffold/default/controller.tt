@@ -1,7 +1,7 @@
 <?php
-namespace App\Http\Controllers;
+namespace <%= controller_namespace %>;
 
-use App\<%= model_class_name %>;
+use <%= model_namespace %>\<%= model_class_name %>;
 use App\Http\Requests\<%= model_class_name %>Request;
 use App\Http\Controllers\Controller;
 
