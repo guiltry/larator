@@ -46,43 +46,47 @@ module Larator
 
       # Controller #
 
-      # --controller-location=App/Http/Controllers
+      # --controller-location=app/Http/Controllers/
       def controller_location
-        opt['controller_location'] + '/'
+        folder_format(opt['controller_location']) || "app/Http/Controllers/"
       end
 
       # --controller-namespace=App\\Http\\Controllers
       def controller_namespace
-        opt['controller_namespace']
+        namespace_format(opt['controller_namespace']) || "App\\Http\\Controllers"
       end
 
       # Model #
 
-      # --model-location=App
+      # --model-location=app/
       def model_location
-        opt['model_location'] + '/'
+        folder_format(opt['model_location']) || "app/"
       end
 
       # --model-namespace=App
       def model_namespace
-        opt['model_namespace']
+        namespace_format(opt['model_namespace']) || "App"
       end
 
       # View #
 
       # --model-location=App
       def view_location
-        opt['view_location'] + '/'
+        folder_format(opt['view_location']) || "resources/views/"
       end
 
       ##########
       ## UTIL ##
       ##########
 
-      def to_folder(name)
+      def folder_format(name)
+        return if name == nil
+        return name + '/'
       end
 
-      def to_file(name)
+      def namespace_format(name)
+        return if name == nil
+        return name
       end
     end
   end

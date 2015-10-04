@@ -1,0 +1,8 @@
+# controller_location: "app/Http/Controllers"
+# controller_namespace: "App\\Http\\Controllers"
+
+# model_location: "app/"
+# model_namespace: "App"
+
+# view_location: "resources/views/"
+
