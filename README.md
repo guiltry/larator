@@ -31,7 +31,7 @@ After checking out the repo, run `bundle install` to install dependencies. Then,
 
 ## Todo
 
-* Read options from .larator.conf config file
+* ~~Read options from .larator.conf config file~~
 * Read custom template from .larator folder
 * Add generator for view, controller, request, etc
 * Create gh-pages to explain all features
